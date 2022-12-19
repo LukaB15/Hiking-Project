@@ -1,8 +1,9 @@
 <?php
 
+require "../models/Database.php";
 class Product extends Database
 {
-    public function findAll(): array|false|string
+    public function findAll(): array|false 
     {
         try {
            return $this->query(
@@ -15,19 +16,19 @@ class Product extends Database
         }
     }
 
-    // public function find(string $code): array|false
-    // {
-    //     try {
-    //         return $this->query(
-    //             "SELECT name FROM Hikes WHERE ID = ?",
-    //             [
-    //                 $code
-    //             ]
-    //         )->fetch();
+    public function find(string $code): array|false
+    {
+        try {
+            return $this->query(
+                "SELECT name, distance FROM Hikes WHERE name = ?",
+                [
+                    $code
+                ]
+            )->fetch();
 
-    //     } catch (Exception $e) {
-    //         echo $e->getMessage();
-    //         return [];
-    //     }
-    // }
+        } catch (Exception $e) {
+            echo $e->getMessage();
+            return [];
+        }
+    }
 }

@@ -3,7 +3,8 @@ declare(strict_types=1);
 
 session_start();
 
-require 'vendor/autoload.php';
+// require '../../vendor/autoload.php';
+require "../controllers/ProductController.php";
 
 $url = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
 $method = $_SERVER['REQUEST_METHOD'];
@@ -42,11 +43,11 @@ if ($url === '/' || $url === '') {
 //     }
 // }
 
-// if ($url === 'product') {
-//     $code = $_GET['code'];
-//     $productController = new ProductController();
-//     $productController->show($code);
-// }
+if ($url === 'product') {
+    $code = $_GET['code'];
+    $productController = new ProductController();
+    $productController->show($code);
+}
 
 // if ($url === 'logout') {
 //     $authController  = new AuthController();

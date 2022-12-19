@@ -1,3 +1,3 @@
-<h2><?= $product['productName'] ?></h2>
+<h2><?= $product['name'] ?></h2>
 
-<h3>Price = <?= $product['buyPrice'] ?> €</h3>
+<h3>Distance = <?= $product['distance'] ?> </h3>

@@ -1,8 +1,8 @@
 <ul>
     <?php foreach ($products as $product) : ?>
         <li>
-            <a href="/product?code=<?= $product['productCode']; ?>">
-                <span><?= $product['productName'] ?></span>
+            <a href="/product?code=<?= $product['name']; ?>">
+                <span><?= $product['name'] ?></span>
             </a>
         </li>
     <?php endforeach; ?>

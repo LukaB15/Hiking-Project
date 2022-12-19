@@ -6,9 +6,6 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'ComposerAutoloaderInit986e40361a4ddc2115a8454f86b61ec0' => $baseDir . '/src/vendor/composer/autoload_real.php',
-    'Composer\\Autoload\\ClassLoader' => $baseDir . '/src/vendor/composer/ClassLoader.php',
-    'Composer\\Autoload\\ComposerStaticInit986e40361a4ddc2115a8454f86b61ec0' => $baseDir . '/src/vendor/composer/autoload_static.php',
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
     'Database' => $baseDir . '/src/models/Database.php',
     'Product' => $baseDir . '/src/models/Product.php',

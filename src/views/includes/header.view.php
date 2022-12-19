@@ -26,4 +26,4 @@
     <?php endif; ?>
 </header>
 
-<h1>Classic Models</h1>
+<h1>Hikes</h1>
