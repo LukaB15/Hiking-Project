@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
--- Hôte : mysql:3306
--- Généré le : ven. 16 déc. 2022 à 15:16
--- Version du serveur : 8.0.31
--- Version de PHP : 8.0.19
+-- Hôte : localhost
+-- Généré le : lun. 19 déc. 2022 à 14:40
+-- Version du serveur :  8.0.21-0ubuntu0.20.04.4
+-- Version de PHP : 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `hiking`
+-- Base de données : `hamilton-7-hiking-nilu`
 --
 
 -- --------------------------------------------------------
@@ -29,28 +29,29 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `Hikes` (
   `ID` int UNSIGNED NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_nn_0900_ai_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `date` varchar(255) NOT NULL,
   `distance` float NOT NULL,
   `duration` varchar(255) NOT NULL,
   `elevation_gain` varchar(255) NOT NULL,
   `description` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `update` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
+  `update` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `User_id` int UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `Hikes`
 --
 
-INSERT INTO `Hikes` (`ID`, `name`, `date`, `distance`, `duration`, `elevation_gain`, `description`, `update`) VALUES
-(1, 'Le jardin d\'O', '12/16/2022', 13.04, '4h40', '+326', 'Partez à la découverte de la jolie cité de Nismes aux belles maisons de pierre, de sa nature préservée. Remontez le cours de l\'Eau Noire jusqu\'à Petigny, partez à l\'assaut de ses collines boisées et découvrez, par des sentiers moins fréquentés, le Fondry des Chiens et terminez la randonnée par la découverte du Jardin d\'O', 'No'),
-(2, 'Une boucle depuis la gare de Libramont', '12/16/2022', 7.91, '2h30', '+92', 'Voici la promenade parfaite si vous souhaitez profiter de la neige, quand il y en a, en venant en train.\r\nLe départ et l\'arrivée se font depuis la gare de Libramont, dans les Ardennes.\r\nCette balade de 8 km ne présente pas de difficultés majeures, elle n\'a pour but que de se changer les idées sans s\'encombrer d\'une voiture.', 'No'),
-(3, 'Petite promenade autour de Hamois', '12/16/2022', 6.1, '1h50', '+44', 'Un itinéraire principalement sur asphalte et surfaces dures  et basé sur des promenades plus ou moins bien connues, y compris un GR®, sur le Ravel et sur des plus ou moins petites rues dans et autour de Hamois. Une petite séquence de sentier pouvant être assez boueux par temps de pluie et impossible avec une poussette pour enfants agrémente ce parcours. Un itinéraire de remplacement est proposé dans le descriptif mais réduit la distance parcourue.', 'No'),
-(4, 'Nagimont et Chemin de Sedan depuis Sugny', '12/16/2022', 13.07, '4h25', '+241', 'Très belle promenade, quelque peu physique, au départ de Sugny, principalement dans les bois mais offrant quelques belles vues. Retour par la crête sur le Chemin de Sedan.', 'No'),
-(5, ' Promenade des points de vue à Dohan', '12/16/2022', 7.72, '2h45', '+203', 'Promenade des points de vue dans le village de Dohan, entre Bouillon et Florenville. Un parcours tracé presque entièrement sur des chemins de forêts.', 'No'),
-(6, 'Chapelle Notre-Dame de Fatima, Bois de Ligne et Maquis de Saint-Marcoult', '12/16/2022', 14.59, '2h45', '+154', 'Partez, par les chemins, les sentiers et les belles allées forestières, à la découverte du Bois de Ligne, du maquis de Saint-Marcoult et profitez des larges panoramas de la Wallonie Picarde.\r\nCette randonnée reprend le début et la fin de la très belle randonnée Boucle à Silly, quartier Mauvinage.\r\nC\'est en quelque sorte une version longue qui vous fera découvrir les Bois de Ligne, d\'Enghien et le Maquis de Saint-Marcoult.', 'No'),
-(7, 'Nature, verdure et bord de Sambre entre Floriffoux et Floreffe', '12/16/2022', 7.72, '2h15', '+11', 'Découvrir une partie du village de Floriffoux vers Floreffe, en passant par des petits chemins et un halage naturel, un passage au pied de l\'abbaye de Floreffe : calme et nature assurés.\r\nLe départ est accessible par le train (gare de Floreffe à proximité).', 'No'),
-(8, ' Par le hameau de Borsu et le parc du château de Hoyoux depuis Méan', '12/16/2022', 11.88, '3h50', '+140', 'Boucle proposant des portions entre les champs, dans les sous-bois et sur la route. Parcours assez accessible et agréable, avec notamment un passage par le parc du château de Hoyoux.\r\n\r\nUne alternative plus courte est proposée. Ce parcours de 6,7 km ne passe pas par le château de Hoyoux.', 'No');
+INSERT INTO `Hikes` (`ID`, `name`, `date`, `distance`, `duration`, `elevation_gain`, `description`, `update`, `User_id`) VALUES
+(1, 'Le jardin d\'O', '12/16/2022', 13.04, '4h40', '+326', 'Partez à la découverte de la jolie cité de Nismes aux belles maisons de pierre, de sa nature préservée. Remontez le cours de l\'Eau Noire jusqu\'à Petigny, partez à l\'assaut de ses collines boisées et découvrez, par des sentiers moins fréquentés, le Fondry des Chiens et terminez la randonnée par la découverte du Jardin d\'O', 'No', 1),
+(2, 'Une boucle depuis la gare de Libramont', '12/16/2022', 7.91, '2h30', '+92', 'Voici la promenade parfaite si vous souhaitez profiter de la neige, quand il y en a, en venant en train.\r\nLe départ et l\'arrivée se font depuis la gare de Libramont, dans les Ardennes.\r\nCette balade de 8 km ne présente pas de difficultés majeures, elle n\'a pour but que de se changer les idées sans s\'encombrer d\'une voiture.', 'No', 1),
+(3, 'Petite promenade autour de Hamois', '12/16/2022', 6.1, '1h50', '+44', 'Un itinéraire principalement sur asphalte et surfaces dures  et basé sur des promenades plus ou moins bien connues, y compris un GR®, sur le Ravel et sur des plus ou moins petites rues dans et autour de Hamois. Une petite séquence de sentier pouvant être assez boueux par temps de pluie et impossible avec une poussette pour enfants agrémente ce parcours. Un itinéraire de remplacement est proposé dans le descriptif mais réduit la distance parcourue.', 'No', 2),
+(4, 'Nagimont et Chemin de Sedan depuis Sugny', '12/16/2022', 13.07, '4h25', '+241', 'Très belle promenade, quelque peu physique, au départ de Sugny, principalement dans les bois mais offrant quelques belles vues. Retour par la crête sur le Chemin de Sedan.', 'No', 1),
+(5, ' Promenade des points de vue à Dohan', '12/16/2022', 7.72, '2h45', '+203', 'Promenade des points de vue dans le village de Dohan, entre Bouillon et Florenville. Un parcours tracé presque entièrement sur des chemins de forêts.', 'No', 2),
+(6, 'Chapelle Notre-Dame de Fatima, Bois de Ligne et Maquis de Saint-Marcoult', '12/16/2022', 14.59, '2h45', '+154', 'Partez, par les chemins, les sentiers et les belles allées forestières, à la découverte du Bois de Ligne, du maquis de Saint-Marcoult et profitez des larges panoramas de la Wallonie Picarde.\r\nCette randonnée reprend le début et la fin de la très belle randonnée Boucle à Silly, quartier Mauvinage.\r\nC\'est en quelque sorte une version longue qui vous fera découvrir les Bois de Ligne, d\'Enghien et le Maquis de Saint-Marcoult.', 'No', 1),
+(7, 'Nature, verdure et bord de Sambre entre Floriffoux et Floreffe', '12/16/2022', 7.72, '2h15', '+11', 'Découvrir une partie du village de Floriffoux vers Floreffe, en passant par des petits chemins et un halage naturel, un passage au pied de l\'abbaye de Floreffe : calme et nature assurés.\r\nLe départ est accessible par le train (gare de Floreffe à proximité).', 'No', 2),
+(8, ' Par le hameau de Borsu et le parc du château de Hoyoux depuis Méan', '12/16/2022', 11.88, '3h50', '+140', 'Boucle proposant des portions entre les champs, dans les sous-bois et sur la route. Parcours assez accessible et agréable, avec notamment un passage par le parc du château de Hoyoux.\r\n\r\nUne alternative plus courte est proposée. Ce parcours de 6,7 km ne passe pas par le château de Hoyoux.', 'No', 2);
 
 -- --------------------------------------------------------
 
@@ -113,6 +114,14 @@ CREATE TABLE `Users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
+-- Déchargement des données de la table `Users`
+--
+
+INSERT INTO `Users` (`ID`, `firstname`, `lastname`, `nickname`, `email`, `password`) VALUES
+(1, 'Michel', 'Blanc', 'Michel', 'Michel@gmail.com', '123456'),
+(2, 'Paul', 'Lebrun', 'Paul', 'Paul@gmail.com', '456789');
+
+--
 -- Index pour les tables déchargées
 --
 
@@ -120,7 +129,8 @@ CREATE TABLE `Users` (
 -- Index pour la table `Hikes`
 --
 ALTER TABLE `Hikes`
-  ADD PRIMARY KEY (`ID`);
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `User_id` (`User_id`);
 
 --
 -- Index pour la table `Tags`
@@ -161,11 +171,17 @@ ALTER TABLE `Tags`
 -- AUTO_INCREMENT pour la table `Users`
 --
 ALTER TABLE `Users`
-  MODIFY `ID` int UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Contraintes pour les tables déchargées
 --
+
+--
+-- Contraintes pour la table `Hikes`
+--
+ALTER TABLE `Hikes`
+  ADD CONSTRAINT `Hikes_ibfk_1` FOREIGN KEY (`User_id`) REFERENCES `Users` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Contraintes pour la table `Tags_hikes`
@@ -173,12 +189,6 @@ ALTER TABLE `Users`
 ALTER TABLE `Tags_hikes`
   ADD CONSTRAINT `tags_hikes_ibfk_1` FOREIGN KEY (`hike_id`) REFERENCES `Hikes` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `tags_hikes_ibfk_2` FOREIGN KEY (`tag_id`) REFERENCES `Tags` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Contraintes pour la table `Users`
---
-ALTER TABLE `Users`
-  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`ID`) REFERENCES `Hikes` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

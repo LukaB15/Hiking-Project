@@ -5,6 +5,7 @@ session_start();
 
 // require '../../vendor/autoload.php';
 require "../controllers/ProductController.php";
+require "../controllers/AuthController.php";
 
 $url = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
 $method = $_SERVER['REQUEST_METHOD'];
@@ -19,32 +20,32 @@ if ($url === '/' || $url === '') {
     ...
 ];*/
 
-// if ($url === 'login') {
-//     $authController = new AuthController();
+if ($url === 'login') {
+    $authController = new AuthController();
 
-//     if ($method === 'GET') {
-//         $authController->showLoginForm();
-//     }
+    if ($method === 'GET') {
+        $authController->showLoginForm();
+    }
 
-//     if ($method === 'POST') {
-//         $authController->login($_POST);
-//     }
-// }
+    if ($method === 'POST') {
+        $authController->login($_POST);
+    }
+}
 
-// if ($url === 'registration') {
-//     $authController = new AuthController();
+if ($url === 'registration') {
+    $authController = new AuthController();
 
-//     if ($method === 'GET') {
-//         $authController->showRegistrationForm();
-//     }
+    if ($method === 'GET') {
+        $authController->showRegistrationForm();
+    }
 
-//     if ($method === 'POST') {
-//         $authController->register($_POST);
-//     }
-// }
+    if ($method === 'POST') {
+        $authController->register($_POST);
+    }
+}
 
 if ($url === 'product') {
-    $code = $_GET['code'];
+    $code = $_GET['name'];
     $productController = new ProductController();
     $productController->show($code);
 }

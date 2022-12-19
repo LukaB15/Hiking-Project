@@ -2,7 +2,7 @@
 
 <form action="login" method="post">
     <div>
-        <label for="username">Username</label>
+        <label for="username">username</label>
         <input type="text" name="username">
     </div>
     <div>
