@@ -1,7 +1,6 @@
 <?php
 declare(strict_types=1);
 
-require "../models/Auth.php";
 class AuthController
 {
     private Auth $authModel;

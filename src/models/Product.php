@@ -1,6 +1,5 @@
 <?php
 
-require "../models/Database.php";
 class Product extends Database
 {
     public function findAll(): array|false 

@@ -1,7 +1,5 @@
 <?php
 
-
-// require "../models/Database.php";
 class Auth extends Database
 {
     public function create(string $firstname,string $lastname, string $username, string $email, string $password): void
