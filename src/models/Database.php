@@ -17,7 +17,7 @@ abstract class Database
         $this->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     }
 
-    protected function query(string $query, array $params = []): false|PDOStatement
+    protected function query(string $query, array $params = []):PDOStatement
     {
         $stmt = $this->pdo->prepare($query);
         $stmt->execute($params);
@@ -25,7 +25,7 @@ abstract class Database
         return $stmt;
     }
 
-    public function getLastInsertId(): false|string
+    public function getLastInsertId():string
     {
         return $this->pdo->lastInsertId();
     }

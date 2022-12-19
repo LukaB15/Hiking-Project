@@ -2,7 +2,7 @@
 
 class Product extends Database
 {
-    public function findAll(): array|false|string
+    public function findAll(): array
     {
         try {
            return $this->query(
