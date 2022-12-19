@@ -2,11 +2,11 @@
 
 class Product extends Database
 {
-    public function findAll(): array|false
+    public function findAll(): array|false|string
     {
         try {
            return $this->query(
-                'SELECT productCode, productName FROM products LIMIT 20'
+                'SELECT name FROM Hikes LIMIT 20'
             )->fetchAll();
 
         } catch (Exception $e) {
@@ -15,19 +15,19 @@ class Product extends Database
         }
     }
 
-    public function find(string $code): array|false
-    {
-        try {
-            return $this->query(
-                "SELECT productCode, productName, buyPrice FROM products WHERE productCode = ?",
-                [
-                    $code
-                ]
-            )->fetch();
+    // public function find(string $code): array|false
+    // {
+    //     try {
+    //         return $this->query(
+    //             "SELECT name FROM Hikes WHERE ID = ?",
+    //             [
+    //                 $code
+    //             ]
+    //         )->fetch();
 
-        } catch (Exception $e) {
-            echo $e->getMessage();
-            return [];
-        }
-    }
+    //     } catch (Exception $e) {
+    //         echo $e->getMessage();
+    //         return [];
+    //     }
+    // }
 }
