@@ -33,6 +33,7 @@ class AddController {
         include 'views/add.view.php';
         include 'views/includes/footer.view.php';
     }
+
 }
 
 ?>
