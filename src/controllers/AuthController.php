@@ -47,7 +47,7 @@ class AuthController
 
     public function login(array $input)
     {
-        if (empty($input) || empty($input['username']) || empty($input['password']) || empty($input['firstname']) || empty($input['lastname'])) {
+        if (empty($input) || empty($input['username']) || empty($input['password'])) {
             throw new Exception('Form data not validated.');
         }
 

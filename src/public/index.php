@@ -48,7 +48,7 @@ if ($url === 'product') {
     $productController->show($code);
 }
 
-// if ($url === 'logout') {
-//     $authController  = new AuthController();
-//     $authController->logout();
-// }
+if ($url === 'logout') {
+    $authController  = new AuthController();
+    $authController->logout();
+}
