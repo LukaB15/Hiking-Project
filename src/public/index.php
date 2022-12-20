@@ -18,6 +18,12 @@ if ($url === '/' || $url === '') {
     ...
 ];*/
 
+if ($url === 'add') {
+    $add = new AddController();
+    if ($method === 'GET') {
+        $add->showAddForm();
+    }
+}
 // if ($url === 'login') {
 //     $authController = new AuthController();
 
@@ -42,11 +48,11 @@ if ($url === '/' || $url === '') {
 //     }
 // }
 
-// if ($url === 'product') {
-//     $code = $_GET['code'];
-//     $productController = new ProductController();
-//     $productController->show($code);
-// }
+if ($url === 'product') {
+     $name = $_GET['name'];
+     $productController = new ProductController();
+     $productController->show($name);
+}
 
 // if ($url === 'logout') {
 //     $authController  = new AuthController();

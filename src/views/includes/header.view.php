@@ -25,5 +25,3 @@
         <span>Hello <?= $_SESSION['user']['username'] ?></span>
     <?php endif; ?>
 </header>
-
-<h1>Classic Models</h1>

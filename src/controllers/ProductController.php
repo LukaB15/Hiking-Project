@@ -20,16 +20,16 @@ class ProductController
         include 'views/includes/footer.view.php';
     }
 
-    // public function show(string $code): void
-    // {
-    //     if (empty($code)) {
-    //         throw new Exception("Product code was not provided.");
-    //     }
+    public function show(string $name): void
+    {
+         if (empty($name)) {
+             throw new Exception("Product code was not provided.");
+         }
 
-    //     $product = $this->productModel->find($code);
+        $product = $this->productModel->find($name);
 
-    //     include 'views/includes/header.view.php';
-    //     include 'views/product.view.php';
-    //     include 'views/includes/footer.view.php';
-    // }
+        include 'views/includes/header.view.php';
+        include 'views/product.view.php';
+        include 'views/includes/footer.view.php';
+    }
 }

@@ -2,7 +2,7 @@
 
 class Product extends Database
 {
-    public function findAll(): array
+    public function findAll(): array|false
     {
         try {
            return $this->query(
@@ -15,19 +15,19 @@ class Product extends Database
         }
     }
 
-    // public function find(string $code): array|false
-    // {
-    //     try {
-    //         return $this->query(
-    //             "SELECT name FROM Hikes WHERE ID = ?",
-    //             [
-    //                 $code
-    //             ]
-    //         )->fetch();
+    public function find(string $name): array|false
+    {
+        try {
+            return $this->query(
+                "SELECT name, distance, duration, description, elevation_gain FROM Hikes WHERE name = ?",
+                [
+                    $name
+                ]
+            )->fetch();
 
-    //     } catch (Exception $e) {
-    //         echo $e->getMessage();
-    //         return [];
-    //     }
-    // }
+        } catch (Exception $e) {
+            echo $e->getMessage();
+            return [];
+        }
+    }
 }
