@@ -17,7 +17,7 @@ abstract class Database
         $this->pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
     }
 
-    protected function query(string $query, array $params = []):PDOStatement
+    protected function query(string $query, array $params = []): PDOStatement|false
     {
         $stmt = $this->pdo->prepare($query);
         $stmt->execute($params);

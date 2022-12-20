@@ -2,7 +2,11 @@
 
 class Product extends Database
 {
+<<<<<<< HEAD
     public function findAll(): array|false
+=======
+    public function findAll(): array|false 
+>>>>>>> luka2
     {
         try {
            return $this->query(
@@ -15,13 +19,13 @@ class Product extends Database
         }
     }
 
-    public function find(string $name): array|false
+    public function find(string $code): array|false
     {
         try {
             return $this->query(
-                "SELECT name, distance, duration, description, elevation_gain FROM Hikes WHERE name = ?",
+                "SELECT name, distance FROM Hikes WHERE name = ?",
                 [
-                    $name
+                    $code
                 ]
             )->fetch();
 

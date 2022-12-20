@@ -1,7 +1,6 @@
 <?php
 declare(strict_types=1);
 
-
 class ProductController
 {
     private Product $productModel;
@@ -20,13 +19,13 @@ class ProductController
         include 'views/includes/footer.view.php';
     }
 
-    public function show(string $name): void
+    public function show(string $code): void
     {
-         if (empty($name)) {
-             throw new Exception("Product code was not provided.");
-         }
+        if (empty($code)) {
+            throw new Exception("Product code was not provided.");
+        }
 
-        $product = $this->productModel->find($name);
+        $product = $this->productModel->find($code);
 
         include 'views/includes/header.view.php';
         include 'views/product.view.php';

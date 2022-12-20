@@ -24,4 +24,10 @@
     <?php if (!empty($_SESSION['user'])): ?>
         <span>Hello <?= $_SESSION['user']['username'] ?></span>
     <?php endif; ?>
+<<<<<<< HEAD
 </header>
+=======
+</header>
+
+<h1>Hikes</h1>
+>>>>>>> luka2
