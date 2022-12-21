@@ -6,7 +6,7 @@ class Product extends Database
     {
         try {
            return $this->query(
-                'SELECT name FROM Hikes LIMIT 20'
+                'SELECT * FROM Hikes LIMIT 20'
             )->fetchAll();
 
         } catch (Exception $e) {
