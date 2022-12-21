@@ -52,7 +52,7 @@ if ($url === 'registration') {
 }
 
 if ($url === 'product') {
-    $code = $_GET['name'];
+    $code = $_GET['id'];
     $productController = new ProductController();
     $productController->show($code);
 }
@@ -65,6 +65,6 @@ if ($url === 'logout') {
 if ($url === 'remove') {
     if($method === 'POST') {
         $productController = new ProductController();
-        $productController->remove($_POST['name']);
+        $productController->remove($_POST['id']);
     } 
 }

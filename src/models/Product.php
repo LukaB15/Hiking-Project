@@ -19,7 +19,7 @@ class Product extends Database
     {
         try {
             return $this->query(
-                "SELECT * FROM Hikes WHERE name = ?",
+                "SELECT * FROM Hikes WHERE id = ?",
                 [
                     $code
                 ]
@@ -33,10 +33,8 @@ class Product extends Database
 
     public function remove(string $code): void
     {
-        if (!$this->query("DELETE from Hikes WHERE name = ?", [$code])) 
-        {
-            throw new Exception('Error during registration.');
+        if(!$this->query("DELETE FROM Hikes WHERE id = ?", [$code])) {
+            throw new Exception("Product code was not provided.");
         }
-
     }
 }

@@ -32,8 +32,10 @@ class ProductController
         include 'views/includes/footer.view.php';
     }
 
-    public function remove(string $code): void {
-        if (empty($code)) {
+    public function remove(string $code): void 
+    {
+        if (empty($code)) 
+        {
             throw new Exception("Product code was not provided.");
         }
 
