@@ -18,19 +18,14 @@ if ($url === '/' || $url === '') {
     ...
 ];*/
 
-<<<<<<< HEAD
 if ($url === 'add') {
     $add = new AddController();
     if ($method === 'GET') {
         $add->showAddForm();
     }
 }
-// if ($url === 'login') {
-//     $authController = new AuthController();
-=======
-if ($url === 'login') {
-    $authController = new AuthController();
->>>>>>> luka2
+ if ($url === 'login') {
+     $authController = new AuthController();
 
     if ($method === 'GET') {
         $authController->showLoginForm();
@@ -54,15 +49,9 @@ if ($url === 'registration') {
 }
 
 if ($url === 'product') {
-<<<<<<< HEAD
-     $name = $_GET['name'];
-     $productController = new ProductController();
-     $productController->show($name);
-=======
     $code = $_GET['name'];
     $productController = new ProductController();
     $productController->show($code);
->>>>>>> luka2
 }
 
 if ($url === 'logout') {
