@@ -1,5 +1,6 @@
 
 <div class="bck_register">
+    <div class="bckblur_login"></div>
     <div class="form_register">
         <h2 class="title_register">REGISTER</h2>
         <p class="p_register">Enter your credentials</p>

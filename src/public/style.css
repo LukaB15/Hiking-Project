@@ -31,7 +31,8 @@ nav{
 }
 .nav_home li a:hover{
     color:#16425B;
-    border-bottom:2px solid #16425B;
+    border-bottom:2px solid #FF6F59;
+    border-top:2px solid #FF6F59;
     transition: 0.3s;
 }
 .nav_login{
@@ -60,9 +61,9 @@ nav{
     transition: 0.3s;
 }
 .nav_login li:first-child a:hover{
-    color:#16425B;
+    color:#FF6F59;
     background-color: white;
-    border:2px solid #16425B;
+    border:2px solid #FF6F59;
     transition: 0.3s;
 }
 .nav_login li:last-child a{
@@ -72,7 +73,7 @@ nav{
 }
 .nav_login li:last-child a:hover{
     color:#16425B;
-    border-bottom:2px solid #16425B;
+    border-bottom:2px solid #FF6F59;
     transition: 0.3s;
 }
 .nav_logout li:last-child {
@@ -84,8 +85,8 @@ nav{
     transition: 0.3s;
 }
 .nav_logout li:last-child a:hover{
-    color:#16425B;
-    border-bottom:2px solid #16425B;
+    color:#FF6F59;
+    border-bottom:2px solid #FF6F59;
     transition: 0.3s;
 }
 a{
@@ -259,8 +260,8 @@ a{
     list-style: none;
     border: 2px solid #16425B;
     border-radius: 5px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    /* padding-top: 30px;
+    padding-bottom: 30px; */
     margin-top: 20px;
     width: 100%;
     display: flex;
@@ -279,9 +280,17 @@ a{
 .logo{
     padding-right: 30px;
     padding-left: 30px;
+    background-color: #16425B;
+    border-top:2px solid #16425B;
+    border-left: 2px solid #16425B;
+    border-bottom: 2px solid #16425B;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-right:30px ;
+    border-radius:5px 0px 0 5px;
 }
 .color{
-    color:#BF4342 !important;
+    color:white !important;
 }
 .info{
     display: flex;
@@ -301,7 +310,7 @@ a{
 .distance{
     font-family: 'Chivo Mono', monospace;
     color:white;
-    background-color: #16425B;
+    background-color: #FF6F59;
     padding: 7px;
     border-radius: 5px;
 }
@@ -317,7 +326,7 @@ a{
 .elevation{
     font-family: 'Chivo Mono', monospace;
     color:white;
-    background-color: #16425B;
+    background-color: #FF6F59;
     padding: 7px;
     border-radius: 5px;
 }
@@ -325,6 +334,7 @@ a{
     text-align:start;
     font-family: 'Slabo 27px', serif;
     color:#16425B;
+    margin-right: 10px;
 }
 @media (max-width:480px) {
     .hike_list_li{
@@ -364,8 +374,23 @@ a{
 }
 /* Single Hike */
 .single_container{
-    background-image: url("../images/low-poly-grid-haikei.png");
+    /* background-image: 
+    linear-gradient(360deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%),
+    url(../images/345228.jpg); */
+    /* background-color: #ffffff;
+    opacity: 1;
+    background: repeating-linear-gradient( -45deg, #16425B, #16425B 20px, #ffffff 20px, #ffffff 100px ); */
 }
+.bckblur_single{
+    background-image: url("../images/bckheader.png");
+    background-size: cover;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    width: 100%;
+    height: 710px;
+    position: absolute;
+
+  }
 .single_hike{
     display: flex;
     flex-direction: column;
@@ -373,26 +398,32 @@ a{
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    height:600px;
+    height:610px;
     width: 50%;
-    border: 2px solid #16425B;
+    border-left: 2px solid #16425B;
+    border-right: 2px solid #16425B;
+    border-bottom: 2px solid #16425B;
     padding-top: 100px;
     background-color: white;
+    position: relative;
+    top:5%;
 }
 .blue{
     color:#16425B !important;
     font-size: 80px !important;
 }
+
 .single_title h2{
     color:#16425B;
     font-family: 'Chivo Mono', monospace;
+    text-align: center;
 }
 .single_info{
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-bottom: 20px;
-    background-color: #16425B;
+    background-color: #FF6F59;
     width: 100%;
     border-right: 2px solid #16425B;
     border-left: 2px solid #16425B;
@@ -417,26 +448,75 @@ a{
     font-family: 'Slabo 27px', serif;
     width: 80%;
 }
+.infosingle{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+@media (max-width:480px) {
+    .single_title h2{
+        color:#16425B;
+        font-family: 'Chivo Mono', monospace;
+        text-align: center;
+        font-size: 15px;
+    }
+    .single_info .distance_single, .elevation_single{
+        display: flex;
+        align-items: center;
+        font-family: 'Chivo Mono', monospace;
+        color: white;
+        font-size: 10px;
+    }
+    .single_info .duration_single{
+        display: flex;
+        align-items: center;
+        margin-left: 5px;
+        margin-right: 5px;
+        font-family: 'Chivo Mono', monospace;
+        color: white;
+        font-size: 10px;
+    }
+    .infosingle{
+        font-size: 35px !important;
+    }
+    .description_single{
+        font-size: 14px;
+    }
+}
+@media (min-width:481px) and (max-width:768px) {
+ 
+}
 
   /* Login form */
   .bck_login{
     /* background-color: #16425B; */
-    background-image: url(../images/low-poly-grid-haikei.png);
+    background-color: #ffffff;
+    opacity: 1;
+    /* background: repeating-linear-gradient( -45deg, #16425B, #16425B 20px, #ffffff 20px, #ffffff 100px ); */
     width: 100%;
-    height: 600px;
+    height: 610px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 100px;
   }
+  .bckblur_login{
+    background-image: url("../images/bckheader.png");
+    background-size: cover;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    width: 100%;
+    height: 610px;
+    position: absolute;
+
+  }
   .title_login{
     font-family: 'Poppins', sans-serif;
-    color: #16425B;
+    color: #FF6F59;
     margin: 0;
   }
   .p_login{
     font-family: 'Poppins', sans-serif;
-    color: black;
+    color: #16425B;
     margin-top: 10px;
     margin-bottom: 10px;
   }
@@ -452,6 +532,9 @@ a{
     flex-direction: column;
     align-items: center;
     height: 200px;
+    position: relative;
+    top:5%;
+
   }
   #username_login_input{
     font-family: 'Slabo 27px', serif;
@@ -465,24 +548,27 @@ a{
   }
   #submit_login{
     width:100%;
-    background-color: #16425B;
+    background-color: #FF6F59;
     color: white;
     font-family: 'Slabo 27px', serif;
     font-size:20px;
     border-radius: 5px;
+    border: 2px solid #FF6F59;
   }
   #submit_login:hover{
     background-color: white;
-    color:#16425B;
+    color:#FF6F59;
   }
 
   
   /* Register form */
   .bck_register{
     /* background-color: #16425B; */
-    background-image: url(../images/low-poly-grid-haikei.png);
+    background-color: #ffffff;
+    opacity: 1;
+    /* background: repeating-linear-gradient( -45deg, #16425B, #16425B 20px, #ffffff 20px, #ffffff 100px ); */
     width: 100%;
-    height: 600px;
+    height: 610px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -490,7 +576,7 @@ a{
   }
   .title_register{
     font-family: 'Poppins', sans-serif;
-    color: #16425B;
+    color: #FF6F59;
     margin: 0;
   }
   .p_register{
@@ -511,6 +597,8 @@ a{
     flex-direction: column;
     align-items: center;
     height: 300px;
+    position: relative;
+    top:5%;
   }
   #firstname_register_input{
     font-family: 'Slabo 27px', serif;
@@ -539,13 +627,14 @@ a{
   }
   #submit_register{
     width:100%;
-    background-color: #16425B;
+    background-color: #FF6F59;
     color: white;
     font-family: 'Slabo 27px', serif;
     font-size:20px;
     border-radius: 5px;
+    border:2px solid #FF6F59;
   }
   #submit_register:hover{
     background-color: white;
-    color:#16425B;
+    color:#FF6F59;
   }

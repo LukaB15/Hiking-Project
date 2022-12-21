@@ -5,7 +5,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="../images/hiking_FILL0_wght400_GRAD0_opsz48.png">
+    <link rel="stylesheet" href="../style.css">
     <!-- <link rel="stylesheet" href="./style.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
@@ -35,23 +36,4 @@
             <?php endif; ?>
         </ul>
     </nav>
-
-    <!-- <?php if (!empty($_SESSION['user'])): ?>
-        <span>Hello <?= $_SESSION['user']['username'] ?></span>
-    <?php endif; ?> -->
 </header>
-
-<!-- <div class="headerbck">
-<div class="content">
-    <div class="visible">
-        <p>
-            Like a
-        </p>
-        <ul class="ul">
-            <li>Hike</li>
-            <li>Walk</li>
-            <li>Family</li>
-        </ul>
-    </div>
-</div>
-</div> -->

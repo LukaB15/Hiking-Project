@@ -1,4 +1,5 @@
 <div class="single_container">
+<div class="bckblur_single"></div>
     <div class="single_hike">
         <div class="single_logo">
             <span class="material-symbols-outlined blue">
@@ -11,19 +12,19 @@
         
         <div class="single_info">
             <div class="distance_single">
-                <span class="material-symbols-outlined">
+                <span class="material-symbols-outlined infosingle">
                     label_important
                 </span>
                 <?= $product['distance'] ?>km
             </div>
             <div class="duration_single">
-                <span class="material-symbols-outlined">
+                <span class="material-symbols-outlined infosingle">
                     schedule
                 </span> 
                 <?= $product['duration'] ?> 
             </div>
             <div class="elevation_single"> 
-                <span class="material-symbols-outlined">
+                <span class="material-symbols-outlined infosingle">
                     trending_up
                 </span>
                 <?= $product['elevation_gain'] ?>m 

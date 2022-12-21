@@ -1,4 +1,5 @@
 <div class="bck_login">
+    <div class="bckblur_login"></div>
     <div class="form_login">
         <h2 class="title_login">LOGIN</h2>
         <p class="p_login">Enter your credentials</p>
