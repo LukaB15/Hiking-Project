@@ -22,3 +22,8 @@
     <?php endforeach; ?>
 </ul>
 <a href="/add">Ajoutez une base de données</a>
+<form action="remove" method="post">
+    <label for="remove">Choose a hike to remove:</label>
+    <input type="text" name="name"/>
+    <button type="submit">Remove the Hike!</button>
+</form>

@@ -31,4 +31,15 @@ class ProductController
         include 'views/product.view.php';
         include 'views/includes/footer.view.php';
     }
+
+    public function remove(string $code): void {
+        if (empty($code)) {
+            throw new Exception("Product code was not provided.");
+        }
+
+        $this->productModel->remove($code);
+
+        http_response_code(302);
+        header('location: /');
+    }
 }

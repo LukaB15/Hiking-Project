@@ -6,7 +6,7 @@ class Product extends Database
     {
         try {
            return $this->query(
-                'SELECT name FROM Hikes LIMIT 20'
+                'SELECT * FROM Hikes LIMIT 20'
             )->fetchAll();
 
         } catch (Exception $e) {
@@ -19,7 +19,7 @@ class Product extends Database
     {
         try {
             return $this->query(
-                "SELECT name, distance FROM Hikes WHERE name = ?",
+                "SELECT * FROM Hikes WHERE name = ?",
                 [
                     $code
                 ]
@@ -29,5 +29,14 @@ class Product extends Database
             echo $e->getMessage();
             return [];
         }
+    }
+
+    public function remove(string $code): void
+    {
+        if (!$this->query("DELETE from Hikes WHERE name = ?", [$code])) 
+        {
+            throw new Exception('Error during registration.');
+        }
+
     }
 }

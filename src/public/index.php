@@ -23,6 +23,9 @@ if ($url === 'add') {
     if ($method === 'GET') {
         $add->showAddForm();
     }
+    if ($method === 'POST') {
+        $add->save($_POST);
+    }
 }
  if ($url === 'login') {
      $authController = new AuthController();
@@ -57,4 +60,11 @@ if ($url === 'product') {
 if ($url === 'logout') {
     $authController  = new AuthController();
     $authController->logout();
+}
+
+if ($url === 'remove') {
+    if($method === 'POST') {
+        $productController = new ProductController();
+        $productController->remove($_POST['name']);
+    } 
 }

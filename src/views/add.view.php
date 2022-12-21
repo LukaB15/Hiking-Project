@@ -1,6 +1,6 @@
 <h2>Save a Hike</h2>
 
-<form action="save" method="post">
+<form action="add" method="post">
     <div>
         <label for="name">Name :</label>
         <input type="text" name="name">

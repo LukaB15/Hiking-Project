@@ -12,7 +12,7 @@
     <title>Like a Hike</title>
 </head>
 <body>
-<header>
+<!--<header>
     <nav>
         <ul class="nav_home">
             <li><a href="/"><span class="material-symbols-outlined">hiking</span></a></li>
@@ -27,24 +27,9 @@
             </ul>
             <?php endif; ?>
         </ul>
-    </nav>
+    </nav>-->
 
-    <!-- <?php if (!empty($_SESSION['user'])): ?>
+    <!--<?php if (!empty($_SESSION['user'])): ?>
         <span>Hello <?= $_SESSION['user']['username'] ?></span>
-    <?php endif; ?> -->
-</header>
-
- <div class="headerbck">
-<div class="content">
-    <div class="visible">
-        <p>
-            Like a
-        </p>
-        <ul class="ul">
-            <li>Hike</li>
-            <li>Walk</li>
-            <li>Family</li>
-        </ul>
-    </div>
-</div>
-</div>
+    <?php endif; ?>-->
+<!--</header>-->

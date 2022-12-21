@@ -10,20 +10,25 @@ class AddController {
     }
 
     public function save(array $input): void {
-        if(empty($input['name']) || empty($input['distance']) || empty($input['duration']) || empty($input['elevation_gain']) ||empty($input['description']))
+        if(empty($_POST['name']) || empty($input['distance']) || empty($input['duration']) || empty($input['elevation_gain']) ||empty($_POST['description']))
         {
             throw new Exception("Form not validated");
         }
 
         $name = htmlspecialchars($input['name']);
+        $date = date("d/m/Y");
         $distance = htmlspecialchars($input['distance']);
         $duration = htmlspecialchars($input['duration']);
         $elevation_gain = htmlspecialchars($input['elevation_gain']);
         $description = htmlspecialchars($input['description']);
+        $update = "no";
 
-        $this->addModel->create($name, $distance, $duration, $elevation_gain, $description);
+        $this->addModel->create($name, $date, $distance, $duration, $elevation_gain, $description, $update);
 
         $id = $this->addModel->getLastInsertId();
+
+        http_response_code(302);
+        header('location: /add');
 
     }
 
