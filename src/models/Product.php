@@ -19,7 +19,7 @@ class Product extends Database
     {
         try {
             return $this->query(
-                "SELECT name, distance FROM Hikes WHERE name = ?",
+                "SELECT * FROM Hikes WHERE name = ?",
                 [
                     $code
                 ]

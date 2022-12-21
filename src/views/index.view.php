@@ -25,15 +25,17 @@
         <a class="hike_list" href="/product?name=<?= $product['name']; ?>">
             <li class="hike_list_li">
                     <div class="logo">
-                        <span class="material-symbols-outlined">
+                        <span class="material-symbols-outlined color">
                             footprint
                         </span>
                     </div>
                     <div class="info">
-                        <span><?= $product['name'] ?></span>
-                        <span><?= $product['distance'] ?></span>
-                        <span><?= $product['duration'] ?></span>
-                        <span><?= $product['elevation_gain'] ?></span>
+                        <span class="name"><?= $product['name'] ?></span>
+                        <div class="little_info">
+                            <span class="distance"><?= $product['distance'] ?>km</span>
+                            <span class="duration"><?= $product['duration'] ?></span>
+                            <span class="elevation"><?= $product['elevation_gain'] ?>m</span>
+                        </div>
                         <span class="description"><?= $product['description'] ?></span>
                     </div>
             </li>
