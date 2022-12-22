@@ -30,11 +30,15 @@
                 <?= $product['elevation_gain'] ?>m 
             </div>
         </div>
-        <p class="description_single"><?= $product['description'] ?> </p>
-        <form action="remove" method="post">
-    <label for="id">Remove this Hike</label>
-    <input type="checkbox" name="id" value=<?= $product['ID'] ?> />
-    <button type="submit">Are you sure ?</button>
-</form>
+    <p class="description_single"><?= $product['description'] ?> </p>
+    <form action="remove" method="post" class="form_single">
+        <div class="checkbox_single">
+            <label for="id" class="remove_single" >Remove this Hike ?</label>
+            <div class="chck_yes">
+                <input type="checkbox"  class="yes_single" name="id" value=<?= $product['ID'] ?> > Yes</input>
+            </div>
+        </div>
+            <button type="submit" class="submit_single">Are you sure ?</button>
+    </form>
     </div>
 </div>    

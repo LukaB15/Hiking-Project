@@ -34,7 +34,7 @@ class AddController {
 
     public function showAddForm(): void
     {
-        //include 'views/includes/header.view.php';
+        include 'views/includes/header.view.php';
         include 'views/add.view.php';
         include 'views/includes/footer.view.php';
     }

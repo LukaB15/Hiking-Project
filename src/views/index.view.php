@@ -20,6 +20,9 @@
 <div class="Title_Welcome">
     <h2>Welcome to <br> Like A Hike</h2>
 </div>
+<div class="button_add">
+    <a href="/add" class="add_link">Ajouter une randonnée</a>
+</div>
 <ul class="hike_list_ul">
     <?php foreach ($products as $product) : ?>
         <a class="hike_list" href="/product?id=<?= $product['ID']; ?>">
@@ -42,4 +45,4 @@
         </a>
     <?php endforeach; ?>
 </ul>
-<a href="/add">Ajoutez une base de données</a>
+
