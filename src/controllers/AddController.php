@@ -28,13 +28,13 @@ class AddController {
         $id = $this->addModel->getLastInsertId();
 
         http_response_code(302);
-        header('location: /add');
+        header('location: /');
 
     }
 
     public function showAddForm(): void
     {
-        include 'views/includes/header.view.php';
+        //include 'views/includes/header.view.php';
         include 'views/add.view.php';
         include 'views/includes/footer.view.php';
     }
