@@ -80,7 +80,6 @@ class AuthController
         include 'views/login.view.php';
         include 'views/includes/footer.view.php';
     }
-
     public function logout()
     {
         unset($_SESSION['user']);
