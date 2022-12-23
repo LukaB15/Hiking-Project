@@ -31,10 +31,13 @@
             </div>
         </div>
         <p class="description_single"><?= $product['description'] ?> </p>
+        <?php if(!empty($_SESSION['user'])):?>
         <form action="remove" method="post">
-    <label for="id">Remove this Hike</label>
-    <input type="checkbox" name="id" value=<?= $product['ID'] ?> />
-    <button type="submit">Are you sure ?</button>
-</form>
+            <label for="id">Remove this Hike</label>
+            <input type="checkbox" name="id" value=<?= $product['ID'] ?> />
+            <button type="submit">Are you sure ?</button>
+        
+        </form>
+        <?php endif ?>
     </div>
 </div>    

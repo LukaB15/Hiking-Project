@@ -42,4 +42,6 @@
         </a>
     <?php endforeach; ?>
 </ul>
-<a href="/add">Ajoutez une base de données</a>
+<?php if(!empty ($_SESSION['user'])):?>
+    <a href="/add">Ajoutez une base de données</a>
+<?php endif ?>
