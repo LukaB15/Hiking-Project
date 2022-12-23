@@ -830,3 +830,21 @@ a{
     color:#FF6F59;
     transition: 0.3s;
   }
+
+  /* Footer  */
+  footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #16425B;
+    height: 200px;
+}
+.footer_text{
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Chivo Mono', monospace;
+    color:white;
+}
+.white{
+  color:white !important;
+}

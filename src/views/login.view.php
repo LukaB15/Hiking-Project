@@ -5,10 +5,10 @@
         <p class="p_login">Enter your credentials</p>
         <form action="login" method="post">
             <div>
-                <input type="text" name="username" id="username_login_input" placeholder="Username">
+                <input type="text" name="username" id="username_login_input" placeholder="Username" required>
             </div>
             <div>
-                <input type="password" name="password" id="password_login_input" placeholder="Password">
+                <input type="password" name="password" id="password_login_input" placeholder="Password" required>
             </div>
             <input type="submit" value="LOGIN" id="submit_login">
         </form>
