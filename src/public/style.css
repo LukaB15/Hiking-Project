@@ -27,6 +27,7 @@ nav{
 .nav_home li a{
     color:#16425B;
     border-bottom:2px solid transparent;
+    border-top:2px solid transparent;
     transition: 0.3s;
 }
 .nav_home li a:hover{
@@ -250,11 +251,37 @@ a{
     font-family: 'Chivo Mono', monospace;
     color:#16425B;
 }
+/* Button ADD */
+.button_add{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.add_link{
+  text-decoration: none;
+  background-color: #FF6F59;
+  border: 2px solid #FF6F59;
+  border-radius: 5px;
+  padding: 12px;
+  color: white;
+  font-family: 'Chivo Mono', monospace;
+  transition: 0.3s;
+}
+.add_link:hover{
+  text-decoration: none;
+  background-color: white;
+  border: 2px solid #FF6F59;
+  border-radius: 5px;
+  color: #FF6F59;
+  transition: 0.3s;
+}
+
 /* Hikes List */
 .hike_list_ul{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0;
 }
 .hike_list_li{
     list-style: none;
@@ -353,6 +380,21 @@ a{
         width:80%;
         text-align: center;
     }
+    .logo{
+      padding-right: 0px;
+      padding-left: 0px;
+      background-color: white;
+      border-top:0;
+      border-left: 0;
+      border-bottom: 0;
+      padding-top: 10px;
+      padding-bottom: 0;
+      margin-right:0;
+      border-radius:0;
+    }
+    .color{
+      color: #16425B !important;
+    }
 }
 @media (min-width:481px) and (max-width:768px) {
     .hike_list_li{
@@ -371,6 +413,21 @@ a{
         width:80%;
         text-align: center;
     }
+    .logo{
+      padding-right: 0px;
+      padding-left: 0px;
+      background-color: white;
+      border-top:0;
+      border-left: 0;
+      border-bottom: 0;
+      padding-top: 10px;
+      padding-bottom: 0;
+      margin-right:0;
+      border-radius:0;
+    }
+    .color{
+      color: #16425B !important;
+    }
 }
 /* Single Hike */
 .single_container{
@@ -387,7 +444,7 @@ a{
     filter: blur(8px);
     -webkit-filter: blur(8px);
     width: 100%;
-    height: 710px;
+    height: 750px;
     position: absolute;
 
   }
@@ -447,10 +504,56 @@ a{
     font-size: 17px;
     font-family: 'Slabo 27px', serif;
     width: 80%;
+    padding-bottom: 20px;
 }
 .infosingle{
     margin-left: 10px;
     margin-right: 10px;
+}
+.form_single{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.checkbox_single{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.yes_single{
+  margin-top: 10px;
+  margin-bottom: 15px;
+  color: #16425B;
+  font-family: 'Chivo Mono', monospace;
+}
+.chck_yes{
+  color: #16425B;
+  font-family: 'Chivo Mono', monospace;
+}
+.remove_single{
+  color: white;
+  font-family: 'Chivo Mono', monospace;
+  font-size: 20px;
+  background-color: #16425B;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+.submit_single{
+  width:20%;
+  background-color: #FF6F59;
+  color: white;
+  font-family: 'Slabo 27px', serif;
+  font-size:20px;
+  border-radius: 5px;
+  border: 2px solid #FF6F59;
+}
+.submit_single:hover{
+  background-color: white;
+  color:#FF6F59;
 }
 @media (max-width:480px) {
     .single_title h2{
@@ -482,9 +585,7 @@ a{
         font-size: 14px;
     }
 }
-@media (min-width:481px) and (max-width:768px) {
- 
-}
+
 
   /* Login form */
   .bck_login{
@@ -637,4 +738,95 @@ a{
   #submit_register:hover{
     background-color: white;
     color:#FF6F59;
+  }
+   /* Add form */
+   .bck_add{
+    /* background-color: #16425B; */
+    background-color: #ffffff;
+    opacity: 1;
+    /* background: repeating-linear-gradient( -45deg, #16425B, #16425B 20px, #ffffff 20px, #ffffff 100px ); */
+    width: 100%;
+    height: 610px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 100px;
+  }
+  .bckblur_add{
+    background-image: url("../images/bckheader.png");
+    background-size: cover;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    width: 100%;
+    height: 710px;
+    position: absolute;
+
+  }
+  .title_add{
+    font-family: 'Poppins', sans-serif;
+    color: #FF6F59;
+    margin: 0;
+  }
+  .p_add{
+    font-family: 'Poppins', sans-serif;
+    color: #16425B;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .form_add{
+    border: 2px solid #16425B;
+    border-radius: 5px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    position: relative;
+    top:5%;
+
+  }
+  #name_add_input{
+    font-family: 'Slabo 27px', serif;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  #distance_add_input{
+    font-family: 'Slabo 27px', serif;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  #duration_add_input{
+    font-family: 'Slabo 27px', serif;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  #elevation_add_input{
+    font-family: 'Slabo 27px', serif;
+    margin-bottom: 25px;
+    font-size: 20px;
+  }
+  #description_add_input {
+    font-family: 'Slabo 27px', serif;
+    margin-bottom: 20px;
+    font-size: 20px;
+    width: 100%;
+  }
+  #submit_add{
+    width:100%;
+    background-color: #FF6F59;
+    color: white;
+    font-family: 'Slabo 27px', serif;
+    font-size:20px;
+    border-radius: 5px;
+    border: 2px solid #FF6F59;
+    transition: 0.3s;
+  }
+  #submit_add:hover{
+    background-color: white;
+    color:#FF6F59;
+    transition: 0.3s;
   }
